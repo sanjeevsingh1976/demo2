@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+body{height: 2000px;}
+
+footer{width: 100%; position: fixed; bottom: 0; height: 60px; background: brown;
+left:0; display: none;
+}
+
+nav ul li{display: inline-block; padding: 20px;}
+nav ul li a{color: black; text-decoration: none;}
+
+.blue{background:blue;}
+
+.blue a{color: white;}
+.active{display: block;}
+
+
+    </style>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Service</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">Career</a></li>
+            <li><a href="#">Contact </a></li>
+        </ul>
+    </nav>
+    
+<footer ></footer>
+
+ <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+ <script>
+$(window).scroll(function(){
+
+if($(this).scrollTop() > 100){
+
+$('footer').addClass('active');
+
+}
+
+else{
+
+    $('footer').removeClass('active');
+
+}
+
+});
+
+
+
+$('document').ready(function(){
+
+$('li').click(function(){
+
+$(this).addClass('blue').siblings().removeClass('blue');
+
+})
+
+
+
+});
+
+
+
+
+
+
+
+
+ </script>
+ 
+
+</body>
+</html>
